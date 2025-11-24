@@ -1,0 +1,220 @@
+/* === Admin Panel Base Styles for Users & Quiz Management === */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  color: #333;
+}
+
+.container {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #2575fc;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+/* Common form styling */
+form {
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  font-size: 1rem;
+}
+
+textarea, input[type="text"], input[type="email"],input[type="password"], select, input[name="options"] {
+  width: 100%;
+  padding: 0.6rem 0.1rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  resize: vertical;
+}
+
+textarea:focus, input:focus, select:focus {
+  outline: none;
+  border-color: #2575fc;
+  box-shadow: 0 0 0 2px rgba(37, 117, 252, 0.2);
+}
+
+/* Buttons */
+button {
+  background: #2575fc;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #1a5edb;
+}
+
+/* Links inside forms */
+form a {
+  margin-left: 1rem;
+  color: #2575fc;
+  font-weight: 600;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+/* Error and success messages */
+.error-msg, .success-msg {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-msg {
+  color: #d9534f;
+}
+
+.success-msg {
+  color: #28a745;
+}
+
+/* Table Styling for view_users.php */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+table th, table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table th {
+  background: #2575fc;
+  color: white;
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+table a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 0.3rem;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+/* Inline forms for delete buttons */
+.inline-form {
+  display: inline;
+}
+
+.btn-delete {
+  background: #d9534f;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  margin-left: 1rem;
+  align-self: center;
+}
+
+.btn-delete:hover {
+  background: #b52b27;
+}
+
+/* Lists for quizzes */
+.quiz-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+.quiz-list li {
+  background: #f4f6fb;
+  border: 1px solid #d3d9f5;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  table th, table td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  form, .quiz-list {
+    max-width: 100%;
+  }
+
+  .quiz-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-delete {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+.btn-back {
+  display: inline-block;
+  background: #6c757d;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-back:hover {
+  background: #5a6268;
+}

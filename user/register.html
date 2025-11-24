@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Register</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Same inline style as login.html for side-by-side buttons */
+    .auth-form .button-row {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .auth-form .button-row button {
+      flex: 1;
+    }
+  </style>
+</head>
+<body class="auth-body">
+  <div class="auth-container">
+
+    <h2>Create an Account</h2>
+    <form action="../process/register_user.php" method="POST" class="auth-form">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+
+      <div class="button-row">
+        <button type="button" onclick="window.location.href='../index.html'">Back</button>
+        <button type="submit">Register</button>
+      </div>
+    </form>
+
+    <p class="auth-switch">Already have an account? <a href="login.php">Login</a></p>
+  </div>
+</body>
+</html>
